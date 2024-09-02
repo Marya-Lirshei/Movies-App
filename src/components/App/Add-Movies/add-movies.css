@@ -1,0 +1,6 @@
+.movies-card{
+    display: flex;
+    justify-content: space-between;
+    width: 279px;
+    height: 451px;
+}

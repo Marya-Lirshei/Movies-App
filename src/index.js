@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from "react-dom/client";
+import App from './components/App/App';
 // import ReactDOM from 'react-dom/client';
 // import './index.css';
 // import App from './App';
@@ -17,11 +18,6 @@ import { createRoot } from "react-dom/client";
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-const App = () =>{
-  return(
-    <div className='test'>Test</div>
-  )
-}
 
 
 const rootElement = document.getElementById("root");
