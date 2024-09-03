@@ -1,24 +1,20 @@
 import React from "react";
 import "./movies-item.css"
 
-function MoviesItem (){
-return(
-<div className="movies-card">
-      <div className="movies-img"></div>
-      <div className="movies-info">
-        <h2>Название</h2>
-        <h5>Дата</h5>
-        <div className="movies-info">
-          A former basketball all-star, who has lost his wife and family
-          foundation in a struggle with addiction attempts to regain his soul
-          and salvation by becoming the coach of a disparate ethnically mixed
-          high. A former basketball all-star, who has lost his wife and family
-          foundation in a struggle with addiction attempts to regain his soul
-          and salvation by becoming the coach of a disparate ethnically mixed
-          high
-        </div>
-      </div>
-    </div>
-)
+import truncate from "../../utils/truncate";
+
+function MoviesItem ({ imageUrl, title, releaseDate, summary }){
+    return (
+        <li className="movies-card">
+          <div className="movies-img">
+            <img src={imageUrl} alt={title} />
+          </div>
+          <div className="movies-info">
+            <h4>{title}</h4>
+            <h5>{releaseDate}</h5>
+            <p>{truncate(summary)}</p>
+          </div>
+        </li>
+      );
 }
 export default MoviesItem
