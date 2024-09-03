@@ -1,9 +1,9 @@
 import React from "react";
-import "./add-movies.css"
+import "./movies-item.css"
 
-function AddMovies() {
-  return (
-    <div className="movies-card">
+function MoviesItem (){
+return(
+<div className="movies-card">
       <div className="movies-img"></div>
       <div className="movies-info">
         <h2>Название</h2>
@@ -19,6 +19,6 @@ function AddMovies() {
         </div>
       </div>
     </div>
-  );
+)
 }
-export default AddMovies;
+export default MoviesItem

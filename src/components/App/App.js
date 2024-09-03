@@ -1,6 +1,6 @@
 import React from "react";
 import SearchPanel from "../SearchPanel/search-panel";
-import AddMovies from "./Add-Movies/add-movies";
+import MoviesList from "../MoviesList/movies-list";
 
 import "./App.css"
 
@@ -8,7 +8,7 @@ function App() {
   return (
   <div className="wrapper">
   <SearchPanel />
-  <AddMovies />
+  <MoviesList />
   
   </div>
   )
