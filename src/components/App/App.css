@@ -37,12 +37,12 @@ body {
   font-weight: 300;
 }
 
-.wrapper{
-    background: #fff;
-    max-width:1100px;
-    max-height: 1147px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    position: relative;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+.wrapper {
+  background: #fff;
+  width: 1010px;
+  height: 1147px;
+  margin: 0 auto;
+  padding: 20px 36px;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }

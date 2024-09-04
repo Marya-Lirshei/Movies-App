@@ -13,8 +13,7 @@ function SearchPanel() {
         </button>
       </div>
       <form /* onSubmit={this.onSubmit} */>
-        <input className="search-movies" 
-        placeholder="Type to search..." />
+        <input className="search-movies" placeholder="Type to search..." />
       </form>
     </header>
   );
