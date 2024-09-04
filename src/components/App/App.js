@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import SearchPanel from "../SearchPanel/search-panel";
 import MoviesList from "../MoviesList/movies-list";
@@ -6,6 +6,17 @@ import MoviesList from "../MoviesList/movies-list";
 import "./App.css";
 
 function App() {
+  const getMoviesData = () => {
+    fetch(
+      "https://api.themoviedb.org/3/discover/movie?api_key=8a5ec3319366a9a581bce32a752fa3b4"
+    )
+      .then((res) => res.json())
+      .then((json) => console.log(json.results));
+  };
+
+  useEffect(() => {
+    getMoviesData();
+  }, []);
   const mockData = [
     {
       id: 1,
