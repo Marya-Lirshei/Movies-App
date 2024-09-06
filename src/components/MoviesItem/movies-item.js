@@ -6,19 +6,22 @@ import "./movies-item.css";
 
 import truncate from "../../utils/truncate";
 
-function MoviesItem({ imageUrl, title, releaseDate, summary }) {
+function MoviesItem({ imageUrl, title, releaseDate, overview }) {
   const formattedReleaseDate = format(parseISO(releaseDate), "LLLL d, yyyy", {
     locale: enUS,
   });
+
+  const baseImageUrl = "https://image.tmdb.org/t/p/original";
+
   return (
     <li className="movies-card">
       <div className="movies-img">
-        <img src={imageUrl} alt={title} />
+        <img src={`${baseImageUrl}${imageUrl}`} alt={title} />
       </div>
       <div className="movies-info">
-        <h4>{title}</h4>
-        <h5>{formattedReleaseDate}</h5>
-        <p>{truncate(summary)}</p>
+        <div>{title}</div>
+        <div>{formattedReleaseDate}</div>
+        <p>{truncate(overview)}</p>
       </div>
     </li>
   );
