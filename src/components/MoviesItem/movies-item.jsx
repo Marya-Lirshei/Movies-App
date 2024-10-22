@@ -1,6 +1,7 @@
 // import React from "react";
 import { parseISO, format } from "date-fns";
 import { enUS } from "date-fns/locale";
+import { Rate } from "antd";
 
 import "./movies-item.css";
 
@@ -34,8 +35,10 @@ function MoviesItem({
   };
 
   const color = ratingColor(rating);
-
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
+  const ratingFixed = rating.toFixed(1);
+  const ratingStars = (ratingFixed * 5) / 10;
+  console.log("ratingStars: ", ratingStars);
 
   return (
     <li className="movies-card">
@@ -45,11 +48,12 @@ function MoviesItem({
       <div className="movies-info">
         <div className="title-rating">
           <div className="info-title">{title} </div>
-          <div className={`info-rating ${color}`}>{rating.toFixed(1)} </div>
+          <div className={`info-rating ${color}`}>{ratingFixed} </div>
         </div>
         <div className="info-date">{formattedReleaseDate}</div>
         <div className="info-genre">{names.join(" ")}</div>
         <p className="info-text">{truncate(overview)}</p>
+        <Rate allowHalf defaultValue={ratingStars} className="custom-rate" />
       </div>
     </li>
   );

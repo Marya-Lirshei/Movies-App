@@ -16,8 +16,8 @@
 .movies-info {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  gap: 20px;
+  justify-content: space-between;
+  gap: 10px;
   padding: 10px 20px 50px 20px;
 }
 
@@ -59,6 +59,10 @@
 .info-rating.red {
   border: 3px solid red;
 }
+
+/* .custom-rate{
+  margin-bottom: 10px;
+} */
 
 /* .info-genre{
   border: 2px solid red
