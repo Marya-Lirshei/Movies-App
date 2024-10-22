@@ -5,9 +5,17 @@ import React from "react";
 import "./movies-list.css";
 import MoviesItem from "../MoviesItem/movies-item";
 
-function MoviesList({ movies }) {
+function MoviesList({ movies, genresData }) {
   const elem = movies.map((item) => {
-    const { id, poster_path, title, release_date, overview } = item;
+    const {
+      id,
+      poster_path,
+      title,
+      release_date,
+      overview,
+      vote_average,
+      genre_ids,
+    } = item;
     return (
       <MoviesItem
         key={id}
@@ -15,6 +23,9 @@ function MoviesList({ movies }) {
         title={title}
         releaseDate={release_date}
         overview={overview}
+        rating={vote_average}
+        genre={genre_ids}
+        genresData={genresData}
       />
       //   <MoviesItem  {...movies}
       // />

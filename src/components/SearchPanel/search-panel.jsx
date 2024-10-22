@@ -12,14 +12,14 @@ function SearchPanel({ onSearch }) {
 
   return (
     <header className="header">
-      <div className="button-wrapper">
+      {/* <div className="button-wrapper">
         <button type="button" className="button-search">
           Search
         </button>
         <button type="button" className="button-rated">
           Rated
         </button>
-      </div>
+      </div> */}
       <form onSubmit={handleSearch}>
         <input
           className="search-movies"

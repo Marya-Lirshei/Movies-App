@@ -23,4 +23,43 @@
 
 .movies-info p {
   font-size: 12px;
+  line-break: anywhere;
+  line-height: revert;
 }
+
+.info-title{
+  display: flex;
+  align-items: center;
+}
+
+.title-rating{
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-rating{
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(56, 47, 47);
+}
+
+.info-rating.green {
+  border: 3px solid rgb(150, 221, 150);
+}
+
+.info-rating.orange {
+  border: 3px solid orange;
+}
+
+.info-rating.red {
+  border: 3px solid red;
+}
+
+/* .info-genre{
+  border: 2px solid red
+} */
