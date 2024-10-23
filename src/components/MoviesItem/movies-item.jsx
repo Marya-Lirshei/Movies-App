@@ -16,8 +16,8 @@ function MoviesItem({
   genre: genreNums,
   genresData,
 }) {
-  console.log("🐯 ~ MoviesItem ~ genreNums:", genreNums);
-  console.log("🐯 ~ MoviesItem ~ genresData:", genresData);
+  // console.log("🐯 ~ MoviesItem ~ genreNums:", genreNums);
+  // console.log("🐯 ~ MoviesItem ~ genresData:", genresData);
   const formattedReleaseDate = format(parseISO(releaseDate), "LLLL d, yyyy", {
     locale: enUS,
   });
@@ -26,7 +26,7 @@ function MoviesItem({
     (el) => genresData.find((elem) => elem.id === el).name
   );
 
-  console.log(names);
+  // console.log(names);
 
   const ratingColor = () => {
     if (rating >= 7) return "green";
@@ -38,7 +38,7 @@ function MoviesItem({
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
   const ratingFixed = rating.toFixed(1);
   const ratingStars = (ratingFixed * 5) / 10;
-  console.log("ratingStars: ", ratingStars);
+  // console.log("ratingStars: ", ratingStars);
 
   return (
     <li className="movies-card">

@@ -27,17 +27,17 @@
   line-height: revert;
 }
 
-.info-title{
+.info-title {
   display: flex;
   align-items: center;
 }
 
-.title-rating{
+.title-rating {
   display: flex;
   justify-content: space-between;
 }
 
-.info-rating{
+.info-rating {
   width: 35px;
   height: 35px;
   font-size: 12px;
