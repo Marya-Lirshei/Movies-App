@@ -6,6 +6,7 @@ import { Rate } from "antd";
 import "./movies-item.css";
 
 import truncate from "../../utils/truncate";
+import truncateTitle from "../../utils/truncateTitle";
 
 function MoviesItem({
   imageUrl,
@@ -18,9 +19,16 @@ function MoviesItem({
 }) {
   // console.log("🐯 ~ MoviesItem ~ genreNums:", genreNums);
   // console.log("🐯 ~ MoviesItem ~ genresData:", genresData);
-  const formattedReleaseDate = format(parseISO(releaseDate), "LLLL d, yyyy", {
-    locale: enUS,
-  });
+  let formattedReleaseDate = "Date: Unknown";
+  if (releaseDate) {
+    try {
+      formattedReleaseDate = format(parseISO(releaseDate), "LLLL d, yyyy", {
+        locale: enUS,
+      });
+    } catch (error) {
+      console.error("Invalid date format:", releaseDate);
+    }
+  }
 
   const names = genreNums.map(
     (el) => genresData.find((elem) => elem.id === el).name
@@ -47,7 +55,7 @@ function MoviesItem({
       </div>
       <div className="movies-info">
         <div className="title-rating">
-          <div className="info-title">{title} </div>
+          <div className="info-title">{truncateTitle(title)} </div>
           <div className={`info-rating ${color}`}>{ratingFixed} </div>
         </div>
         <div className="info-date">{formattedReleaseDate}</div>
