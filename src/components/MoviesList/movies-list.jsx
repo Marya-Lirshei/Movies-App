@@ -5,7 +5,7 @@ import React from "react";
 import "./movies-list.css";
 import MoviesItem from "../MoviesItem/movies-item";
 
-function MoviesList({ movies, genresData }) {
+function MoviesList({ movies, genresData, onRateChange }) {
   const elem = movies.map((item) => {
     const {
       id,
@@ -26,6 +26,7 @@ function MoviesList({ movies, genresData }) {
         rating={vote_average}
         genre={genre_ids}
         genresData={genresData}
+        onRateChange={onRateChange}
       />
       //   <MoviesItem  {...movies}
       // />
