@@ -61,3 +61,10 @@ body {
 .pagination{
   margin-top: 20px;
 }
+
+.noResults{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px;
+  color: rgb(182, 111, 111);
+}

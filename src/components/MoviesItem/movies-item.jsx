@@ -9,7 +9,7 @@ import truncate from "../../utils/truncate";
 import truncateTitle from "../../utils/truncateTitle";
 
 function MoviesItem({
-  id,
+  // id,
   imageUrl,
   title,
   releaseDate,
@@ -17,7 +17,7 @@ function MoviesItem({
   rating,
   genre: genreNums,
   genresData,
-  onRateChange,
+  // onRateChange,
 }) {
   // console.log("🐯 ~ MoviesItem ~ genreNums:", genreNums);
   // console.log("🐯 ~ MoviesItem ~ genresData:", genresData);
@@ -36,9 +36,9 @@ function MoviesItem({
     (el) => genresData.find((elem) => elem.id === el).name
   );
 
-  const handleRateChange = (newRating) => {
-    onRateChange(id, newRating);
-  };
+  // const handleRateChange = (newRating) => {
+  //   onRateChange(id, newRating);
+  // };
   // console.log(names);
 
   const ratingColor = () => {
@@ -70,7 +70,7 @@ function MoviesItem({
           allowHalf
           defaultValue={ratingStars}
           className="custom-rate"
-          onChange={handleRateChange}
+          // onChange={handleRateChange}
         />
       </div>
     </li>
